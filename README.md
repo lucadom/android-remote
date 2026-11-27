@@ -39,7 +39,19 @@ The APK is written to `app/build/outputs/apk/debug/app-debug.apk`.
 
 GitHub Actions also builds the debug APK on pushes to `main`, pull requests,
 and manual dispatch. Download it from the workflow run's **android-remote-apk**
-artifact, then install it on the phone.
+artifact, then install it on the phone. For a direct APK download, use the
+`app-debug.apk` asset in the repository's [Releases](../../releases).
+
+To publish a release, tag a commit and push the tag:
+
+```sh
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+GitHub Actions builds that commit and attaches its debug APK to a new release.
+Debug APKs use a temporary signing key on GitHub runners, so a later build may
+require uninstalling the previous app before installing it.
 
 ## License
 
