@@ -12,15 +12,24 @@ buttons to move between slides: volume up advances, and volume down goes back.
 
 The app does not need a companion program on the PC. It presents as a Bluetooth
 keyboard; Windows and PowerPoint receive standard Page Up/Page Down keystrokes.
-Keep the app open in the foreground while presenting.
 
 ## Pair and connect
 
-1. Open the app and grant the requested nearby Bluetooth permissions.
+1. Open the app and grant the requested nearby Bluetooth permissions. Allow
+   notifications to see the remote's persistent notification and stop action.
 2. Tap **Make phone discoverable**, then use Windows Bluetooth settings to add
    the phone as a Bluetooth device.
 3. Return to the app and tap the paired PC in the device list to connect.
-4. Open a PowerPoint slideshow and use the phone's volume buttons.
+4. Open a PowerPoint slideshow and use the phone's volume buttons. The remote
+   remains active when the screen is locked or off.
+5. Tap **Stop remote** in the app or **Stop** in its notification when finished.
+
+While connected, the remote uses an active media session to receive volume
+adjustments with the screen off. The volume buttons may control slides instead
+of the phone's media volume, and Android may route them to another media app or
+a call instead. Screen-off behavior depends on the phone and Android version;
+test it on your device before a presentation. If it does not work, keep the app
+visible and the screen on.
 
 If the phone never appears in Windows Bluetooth settings, its Android build may
 not support the HID Device profile. Pairing availability and behavior vary by
